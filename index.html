@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>橘色回憶 · 獻給羅潔</title>
+  <meta name="description" content="一段回憶、感謝與愛的旅程，來自 PID 的大家。" />
+  <meta name="theme-color" content="#F3E8D5" />
+
+  <!-- Share preview (LINE / Messenger / WhatsApp) -->
+  <meta property="og:title" content="橘色回憶 · 獻給羅潔" />
+  <meta property="og:description" content="一段回憶、感謝與愛的旅程，來自 PID 的大家。" />
+  <meta property="og:type" content="website" />
+  <!-- <meta property="og:image" content="https://YOUR-NAME.github.io/ro-jie-tribute/assets/photos/photo01.jpg" /> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Caveat:wght@500;700&family=Inter:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&family=LXGW+WenKai+TC&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="is-locked">
+
+  <!-- ============ 01 — THE ENVELOPE ============ -->
+  <div id="envelope-screen" class="envelope-screen" aria-label="打開你的信">
+    <div class="floaters" aria-hidden="true"></div>
+
+    <div class="envelope-wrap">
+      <button class="envelope" id="envelope" aria-label="打開你的信">
+        <span class="env-back"></span>
+        <span class="letter">
+          <span class="letter-inner">
+            <span class="eyebrow">獻給</span>
+            <span class="letter-name">羅潔</span>
+            <span class="letter-heart">♡</span>
+          </span>
+        </span>
+        <span class="env-front">
+          <span class="env-to">給 羅潔</span>
+          <span class="env-from">寄件人：PID 全體成員</span>
+        </span>
+        <span class="flap"></span>
+        <span class="postmark" aria-hidden="true">
+          <span>PID</span><small>限時專送</small>
+        </span>
+      </button>
+    </div>
+
+    <button class="btn btn-primary" id="open-btn">快拆開來看 →</button>
+  </div>
+
+  <main id="book" class="book" aria-hidden="true">
+
+    <!-- ============ COVER ============ -->
+    <section id="cover" class="section cover">
+      <div class="paper-dots" aria-hidden="true"></div>
+      <span class="sticker st-1" aria-hidden="true">THANK<br>YOU!</span>
+      <span class="sticker st-2" aria-hidden="true">PID<br>認證 ✓</span>
+      <span class="doodle d-1" aria-hidden="true">✦</span><span class="doodle d-2" aria-hidden="true">★</span><span class="doodle d-3" aria-hidden="true">✿</span>
+      <p class="kicker reveal">Public Information Department</p>
+      <h1 class="cover-title reveal">
+        <span class="small">本期特別企劃・主角是</span>
+        <span class="big">羅潔</span>
+      </h1>
+      <p class="cover-lead reveal">這些年辛苦啦！<br />以下內容由 PID 全員熱情贊助 🎉</p>
+      <p class="cover-from reveal">你的 PID 好夥伴們 ♡</p>
+
+      <nav class="chapters reveal" aria-label="章節">
+        <a href="#journey"><b>02</b> 回憶相簿</a>
+        <a href="#hearts"><b>03</b> <span class="msg-count">17</span> 封信</a>
+        <a href="#finale"><b>04</b> 最後彩蛋</a>
+      </nav>
+      <a class="scroll-cue" href="#journey" aria-label="往下滑">往下滑 ↓</a>
+    </section>
+
+    <!-- ============ 02 — OUR JOURNEY ============ -->
+    <section id="journey" class="section journey">
+      <header class="section-head reveal">
+        <p class="section-num">02</p>
+        <h2>回憶相簿</h2>
+      </header>
+      <div id="timeline" class="timeline"></div>
+    </section>
+
+    <!-- ============ 03 — 20 HEARTS ============ -->
+    <section id="hearts" class="section hearts">
+      <header class="section-head reveal">
+        <p class="section-num">03</p>
+      </header>
+
+      <div class="letters-bar">
+        <span class="letters-group" id="letters-group">01 / 04</span>
+        <span class="letters-progress" id="letters-progress">01–06 / 17</span>
+      </div>
+      <p class="letters-intro" id="letters-intro">第一批來了～</p>
+
+      <div id="letters" class="letters" aria-live="polite"></div>
+
+      <div class="pager">
+        <button class="btn btn-ghost" id="prev-page" aria-label="上一組">←</button>
+        <div class="pager-dots" id="pager-dots" role="tablist" aria-label="留言分組"></div>
+        <button class="btn btn-primary" id="next-page">下一組 →</button>
+      </div>
+    </section>
+
+
+    <!-- ============ 05 — WITH LOVE, PID ============ -->
+    <section id="finale" class="section finale">
+      <div class="fall-layer" id="fall-layer" aria-hidden="true"></div>
+      <div class="finale-inner">
+        <p class="finale-line step">我所愛所想念的羅潔，<br />妳就是我的喜樂、我的冠冕。<br />我親愛的朋友，<br />你們要這樣堅定不移地跟隨主。<br /><small class="verse-ref">腓立比書 4:1</small></p>
+        <h2 class="finale-title step">謝謝你，羅潔！</h2>
+        <p class="finale-line step">接下來的日子也要開開心心，<br />有空記得回來找我們玩！</p>
+        <p class="finale-sign step">你的 PID 好夥伴們 ♡</p>
+        <button class="btn btn-light step" id="read-again">再看一次 ↺</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Photo lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="照片" hidden>
+    <button class="close" id="lightbox-close" aria-label="關閉">×</button>
+    <figure>
+      <div class="lightbox-media" id="lightbox-media"></div>
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+  </div>
+
+  <!-- Letter modal -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-from" hidden>
+    <div class="modal-sheet">
+      <button class="close" id="modal-close" aria-label="關閉">×</button>
+      <p class="modal-num" id="modal-num"></p>
+      <div class="modal-body" id="modal-body"></div>
+      <p class="modal-from" id="modal-from"></p>
+      <div class="modal-nav">
+        <button class="btn btn-ghost" id="modal-prev">← 上一封</button>
+        <button class="btn btn-ghost" id="modal-next">下一封 →</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="to-top" id="to-top" aria-label="回到頂部">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
