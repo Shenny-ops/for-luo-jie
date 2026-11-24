@@ -9,11 +9,13 @@ const PHOTOS = [
   { src: "assets/photos/photo03.jpg", caption: "PID 記者會" },
   { src: "assets/photos/photo04.jpg", caption: "官方認證：你好棒！✍️" },
   { src: "assets/photos/photo05.jpg", caption: "" },
+  { src: "assets/photos/photo06.jpg", caption: "Happy Time", ar: "16/9" },
 ];
 
 const JOURNEY = [
   { label: "開場第一張", layout: "grp-hero", photos: [0] },
   { label: "吃飽了，上工囉", layout: "grp-pair", photos: [1, 2] },
+  { label: "下午茶時間", layout: "grp-hero", photos: [5] },
   { label: "親筆認證", layout: "grp-solo", photos: [3] },
   { label: "壓軸登場",   layout: "grp-last", photos: [4] },
 ];
@@ -162,6 +164,7 @@ function initJourney() {
     g.photos.forEach((pi) => {
       const fig = document.createElement("figure");
       fig.className = "photo";
+      if (PHOTOS[pi].ar) fig.style.setProperty("--ar", PHOTOS[pi].ar);
       fig.appendChild(photoMedia(pi));
       const cap = document.createElement("figcaption");
       cap.textContent = PHOTOS[pi].caption;
