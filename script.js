@@ -10,12 +10,14 @@ const PHOTOS = [
   { src: "assets/photos/photo04.jpg", caption: "官方認證：你好棒！✍️" },
   { src: "assets/photos/photo05.jpg", caption: "" },
   { src: "assets/photos/photo06.jpg", caption: "Happy Time", ar: "16/9" },
+  { src: "assets/photos/photo07.jpg", caption: "", ar: "16/9" },
 ];
 
 const JOURNEY = [
   { label: "開場第一張", layout: "grp-hero", photos: [0] },
   { label: "吃飽了，上工囉", layout: "grp-pair", photos: [1, 2] },
   { label: "下午茶時間", layout: "grp-hero", photos: [5] },
+  { label: "出發囉", layout: "grp-hero", photos: [6] },
   { label: "親筆認證", layout: "grp-solo", photos: [3] },
   { label: "壓軸登場",   layout: "grp-last", photos: [4] },
 ];
@@ -169,6 +171,7 @@ function initJourney() {
       const cap = document.createElement("figcaption");
       cap.textContent = PHOTOS[pi].caption;
       if (PHOTOS[pi].caption) fig.appendChild(cap);
+      else if (g.layout !== "grp-last") fig.style.paddingBottom = "10px";
       fig.addEventListener("click", () => openLightbox(pi));
       grid.appendChild(fig);
     });
